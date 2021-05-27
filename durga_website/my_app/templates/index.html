@@ -1,0 +1,430 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+<style>
+	body {
+		background: #101010;
+		color: #cac1c1;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 400;
+	}
+
+	#more {
+		display: none;
+	}
+
+	.container {
+		margin-bottom: 20px;
+
+	}
+
+	.list-group-item {
+		position: relative;
+		display: block;
+		padding: 10px 15px;
+		margin-bottom: -1px;
+		background-color: #191919;
+		border: 1px solid #191919;
+	}
+
+	#about .btn {
+		margin-top: 0px;
+	}
+</style>
+{% endblock css %}
+{% block content %}
+<!-- home section -->
+<div id="home">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-5 col-sm-3"></div>
+			<div class="col-md-7 col-sm-9">
+				<h3>DOORGA ENTERTAINMENT</h3>
+				<h1>Feel The Power</h1>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- divider section -->
+<div class="divider">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 col-sm-6">
+				<div class="divider-wrapper divider-one">
+					<i class="fa fa-laptop"></i>
+					<h2>Responsive</h2>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+						tincidunt ut laoreet.</p>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6">
+				<div class="divider-wrapper divider-two">
+					<i class="fa fa-mobile"></i>
+					<h2>Easy to use</h2>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+						tincidunt ut laoreet.</p>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-12">
+				<div class="divider-wrapper divider-three">
+					<i class="fa fa-life-ring"></i>
+					<h2>Quick Support</h2>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+						tincidunt ut laoreet.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- about section -->
+<div id="about">
+	<div class="container mb-4">
+
+		<div class="card mb-3 ">
+			<div class="row " style="position: relative;">
+				<div class="col-md-4 col-sm-12">
+					<img style="width:80%;position: absolute;top: 50%;left: 50%;transform: translate(-50%, 50%);"
+						src="{% static 'images/about-img.jpg' %}" class="img-responsive img-fluid" alt="about img">
+				</div>
+				<div style="padding-bottom: 20px;" class="col-md-8 col-sm-12  ">
+					<h2>Accomplishments</h2>
+
+					<p>
+					<ul class="list-group list-group-flush" data-list="accomplishments">
+						<li class="list-group-item list-group-item-action list-group-item-dark table-hover">
+							2010 – center fold feature in Newsday in Trinidad
+						</li>
+						<li class="list-group-item list-group-item-action list-group-item-dark">
+							2012-2013 – Main anchor for live coverage of Chutney Soca Monarch
+						</li>
+						<li class="list-group-item list-group-item-action list-group-item-dark">
+							2015 -2019– NCIC Divali Nagar Canada Agent 5 Queens in the top 5
+						</li>
+						<li class="list-group-item list-group-item-action list-group-item-dark">
+							2018 - International Women’s Day Award Recipient – top 50 most influential Women in Canada
+						</li>
+
+
+						<span class="more" style="display: none;">
+
+							<li class="list-group-item list-group-item-action list-group-item-dark">
+								2019 – Mission We Are One Charity – established by Vash in Canada and registered in
+								Trinidad
+								by Narisha and Bobby Mohammed
+							</li>
+							<li class="list-group-item list-group-item-action list-group-item-dark">
+								2020 – Beauty Makeup Artistry Certificate – Glow Academy
+							</li>
+							<li class="list-group-item list-group-item-action list-group-item-dark">
+								2021- 1st Female Agent for CSM to represent Canada
+							</li>
+							<li class="list-group-item list-group-item-action list-group-item-dark">
+								2021 – Honors Diploma/ licensing candidate -Paralegal Studies
+							</li>
+						</span>
+					</ul>
+					</p>
+					<a onclick="readMore('accomplishments')"  class="myBtn btn btn-default ">Read More</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="container mb-4">
+
+		<div class="card mb-3 ">
+			<div class="row " style="position: relative;">
+				<div class="col-md-4 col-sm-12">
+					<img style="width:80%;position: absolute;top: 50%;left: 50%;transform: translate(-50%, 50%);"
+						src="{% static 'images/about-img.jpg' %}" class="img-responsive img-fluid" alt="about img">
+				</div>
+				<div style="padding-bottom: 20px;" class="col-md-8 col-sm-12  ">
+					<h2>TV Host</h2>
+
+					<p>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item list-group-item-action list-group-item-dark table-hover">
+							2004 - Canada - In D Mix – Chex TV
+						</li>
+						<li class="list-group-item list-group-item-action list-group-item-dark">
+							2010 - Trinidad – Hamare Parampara – Tv Series - CNC 3
+						</li>
+						<li class="list-group-item list-group-item-action list-group-item-dark">
+							2017 - Chutney Soca News – Synergy TV
+						</li>
+						<li class="list-group-item list-group-item-action list-group-item-dark">
+							2011 - Chutney Soca Monarch
+						</li>
+						<li class="list-group-item list-group-item-action list-group-item-dark">
+							2013 - Chutney Soca Monarch
+						</li>
+						<li class="list-group-item list-group-item-action list-group-item-dark">
+							2014 - Chutney Soca Monarch
+						</li>
+
+					</ul>
+					</p>
+					<a href="about.html" class="btn btn-default">LEARN MORE</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="container mb-4">
+
+		<div class="card mb-3 ">
+			<div class="row " style="position: relative;">
+				<div class="col-md-4 col-sm-12">
+					<img style="width:80%;position: absolute;top: 50%;left: 50%;transform: translate(-50%, 50%);"
+						src="{% static 'images/radio.jpeg' %}" class="img-responsive img-fluid" alt="about img">
+				</div>
+				<div style="padding-bottom: 20px;" class="col-md-8 col-sm-12  ">
+					<h2>Radio Host</h2>
+
+					<p>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item list-group-item-action list-group-item-dark table-hover">
+							2004 - In D mix – 770
+						</li>
+						<li class="list-group-item list-group-item-action list-group-item-dark">
+							2006 - Shuga in D Morning – Carib 101 Radio
+						</li>
+						<li class="list-group-item list-group-item-action list-group-item-dark">
+							2008 - Shuga in D Morning - Bacchanal Radio
+						</li>
+						<li class="list-group-item list-group-item-action list-group-item-dark">
+							2009 - Shuga in D Morning – Sangeet 106.1
+						</li>
+						<li class="list-group-item list-group-item-action list-group-item-dark">
+							2009 - The Countdown - Sangeet 106.1
+						</li>
+						<li class="list-group-item list-group-item-action list-group-item-dark">
+							2011 - Shuga in D Morning - Bacchanal Radio
+						</li>
+
+					</ul>
+					</p>
+					<a href="about.html" class="btn btn-default">LEARN MORE</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="container mb-4">
+
+		<div class="card mb-3 ">
+			<div class="row " style="position: relative;">
+				<div class="col-md-4 col-sm-12">
+					<img style="width:80%;position: absolute;top: 50%;left: 50%;transform: translate(-50%, 50%);"
+						src="{% static 'images/about-img.jpg' %}" class="img-responsive img-fluid" alt="about img">
+				</div>
+				<div style="padding-bottom: 20px;" class="col-md-8 col-sm-12  ">
+					<h2>Public Relations</h2>
+
+					<p>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item list-group-item-action list-group-item-dark table-hover">
+							2021 - Chutney Soca Monarch – Agent for Canada
+						</li>
+						<li class="list-group-item list-group-item-action list-group-item-dark">
+							2019 - Brand Ambassador – Glow Cosmetic
+						</li>
+						<li class="list-group-item list-group-item-action list-group-item-dark">
+							2021 - Brand Ambassador – Legendary Gourmet Pepper sauce
+						</li>
+						<li class="list-group-item list-group-item-action list-group-item-dark">
+							2021 – Writer - Let’s Talk with Lakshmee
+						</li>
+
+					</ul>
+					</p>
+					<a href="about.html" class="btn btn-default">LEARN MORE</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="container mb-4">
+
+		<div class="card mb-3 ">
+			<div class="row " style="position: relative;">
+				<div class="col-md-4 col-sm-12">
+					<img style="width:80%;position: absolute;top: 50%;left: 50%;transform: translate(-50%, 50%);"
+						src="{% static 'images/about-img.jpg' %}" class="img-responsive img-fluid" alt="about img">
+				</div>
+				<div style="padding-bottom: 20px;" class="col-md-8 col-sm-12  ">
+					<h2>Master of Ceremonies</h2>
+
+					<p>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item list-group-item-action list-group-item-dark table-hover">
+							Glow - New York
+						</li>
+						<li class="list-group-item list-group-item-action list-group-item-dark">
+							Glow - Orlando
+						</li>
+						<li class="list-group-item list-group-item-action list-group-item-dark">
+							Glow - Toronto
+						</li>
+						<li class="list-group-item list-group-item-action list-group-item-dark">
+							We Lime- Montreal
+						</li>
+						<li class="list-group-item list-group-item-action list-group-item-dark">
+							Hut Like Pepper Picnic
+						</li>
+						<li class="list-group-item list-group-item-action list-group-item-dark">
+							Chutney in D Park
+						</li>
+						<li class="list-group-item list-group-item-action list-group-item-dark">
+							Chutney Fest
+						</li>
+						<li class="list-group-item list-group-item-action list-group-item-dark">
+							Vigor Awards
+						</li>
+						<li class="list-group-item list-group-item-action list-group-item-dark">
+							Sangeet Mela
+						</li>
+						<li class="list-group-item list-group-item-action list-group-item-dark">
+							Chutney Soca Monarch – Toronto
+						</li>
+
+					</ul>
+					</p>
+					<a href="about.html" class="btn btn-default">LEARN MORE</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="container mb-4">
+
+		<div class="card mb-3 ">
+			<div class="row " style="position: relative;">
+				<div class="col-md-4 col-sm-12">
+					<img style="width:80%;position: absolute;top: 50%;left: 50%;transform: translate(-50%, 50%);"
+						src="{% static 'images/about-img.jpg' %}" class="img-responsive img-fluid" alt="about img">
+				</div>
+				<div style="padding-bottom: 20px;" class="col-md-8 col-sm-12  ">
+					<h2>Journalist</h2>
+
+					<p>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item list-group-item-action list-group-item-dark table-hover">
+							2004 – Freelance Caribbean Newspapers – Entertainment Specialist
+						</li>
+						<li class="list-group-item list-group-item-action list-group-item-dark">
+							2009- Guardian Newspaper - Freelance
+						</li>
+						<li class="list-group-item list-group-item-action list-group-item-dark">
+							2013 -Guardian Newspaper – Entertainment Specialist
+						</li>
+						<li class="list-group-item list-group-item-action list-group-item-dark">
+							2015 - Toronto Caribbean - Freelance
+						</li>
+
+					</ul>
+					</p>
+					<a href="about.html" class="btn btn-default">LEARN MORE</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="container mb-4">
+
+		<div class="card mb-3 ">
+			<div class="row " style="position: relative;">
+				<div class="col-md-4 col-sm-12">
+					<img style="width:80%;position: absolute;top: 50%;left: 50%;transform: translate(-50%, 30%);"
+						src="{% static 'images/about-img.jpg' %}" class="img-responsive img-fluid" alt="about img">
+				</div>
+				<div style="padding-bottom: 20px;" class="col-md-8 col-sm-12  ">
+					<h2>Doorga’s Shakti Dance Academy</h2>
+
+					<p>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item list-group-item-action list-group-item-dark table-hover">
+							1990 - Doorga’s Shakti- Montreal
+						</li>
+						<li class="list-group-item list-group-item-action list-group-item-dark">
+							2001 - Doorga’s Shakti – Toronto
+						</li>
+						<li class="list-group-item list-group-item-action list-group-item-dark">
+							2009 - Doorga’s Shakti – Trinidad
+						</li>
+
+					</ul>
+					</p>
+					<a href="about.html" class="btn btn-default">LEARN MORE</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+</div>
+
+<!-- portfolio section -->
+<div id="portfolio">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-offset-2 col-md-8 col-sm-12">
+				<h2>Gallery</h2>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+					ut laoreet. Dolore magna aliquam erat volutpat.</p>
+			</div>
+		</div>
+
+		<div class="row mt30">
+
+			<div class="col-md-4 col-sm-4 col-xs-6">
+				<a href="{% static 'images/portfolio-img1.jpg' %}" data-lightbox-gallery="portfolio-gallery"><img
+						src="{% static 'images/portfolio-img1.jpg' %}" alt="portfolio img"></a>
+			</div>
+			<div class="col-md-4 col-sm-4 col-xs-6">
+				<a href="{% static 'images/portfolio-img2.jpg' %}" data-lightbox-gallery="portfolio-gallery"><img
+						src="{% static 'images/portfolio-img2.jpg' %}" alt="portfolio img"></a>
+			</div>
+			<div class="col-md-4 col-sm-4 col-xs-6">
+				<a href="{% static 'images/portfolio-img3.jpg' %}" data-lightbox-gallery="portfolio-gallery"><img
+						src="{% static 'images/portfolio-img3.jpg' %}" alt="portfolio img"></a>
+			</div>
+
+			<div class="col-md-3 col-sm-6 col-xs-6">
+				<a href="{% static 'images/portfolio-img4.jpg' %}" data-lightbox-gallery="portfolio-gallery"><img
+						src="{% static 'images/portfolio-img4.jpg' %}" alt="portfolio img"></a>
+			</div>
+			<div class="col-md-3 col-sm-6 col-xs-6">
+				<a href="{% static 'images/portfolio-img5.jpg' %}" data-lightbox-gallery="portfolio-gallery"><img
+						src="{% static 'images/portfolio-img5.jpg' %}" alt="portfolio img"></a>
+			</div>
+			<div class="col-md-3 col-sm-6 col-xs-6">
+				<a href="{% static 'images/portfolio-img6.jpg' %}" data-lightbox-gallery="portfolio-gallery"><img
+						src="{% static 'images/portfolio-img6.jpg' %}" alt="portfolio img"></a>
+			</div>
+			<div class="col-md-3 col-sm-6 col-xs-12">
+				<a href="{% static 'images/portfolio-img7.jpg' %}" data-lightbox-gallery="portfolio-gallery"><img
+						src="{% static 'images/portfolio-img7.jpg' %}" alt="portfolio img"></a>
+			</div>
+			<div class="col-md-12 col-sm-12">
+				<a rel="nofollow" href="http://www.templatemo.com/tag/darkgray" class="btn btn-default">View
+					More</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock content %}

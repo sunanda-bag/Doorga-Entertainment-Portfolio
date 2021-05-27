@@ -1,0 +1,275 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+<style>
+	body {
+		background: #101010;
+		color: #cac1c1;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 400;
+	}
+
+	#more {
+		display: none;
+	}
+
+	.container {
+		margin-bottom: 20px;
+
+	}
+
+	.list-group-item {
+		position: relative;
+		display: block;
+		padding: 10px 15px;
+		margin-bottom: -1px;
+		background-color: #191919;
+		border: 1px solid #191919;
+	}
+
+	#about .btn {
+		margin-top: 0px;
+	}
+</style>
+{% endblock css %}
+{% block content %}
+<!-- home section -->
+<div id="home">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-5 col-sm-3"></div>
+			<div class="col-md-7 col-sm-9">
+				<h3>welcome to</h3>
+				<h1>Ary’s World</h1>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- about section -->
+<div id="about">
+	<div class="container mb-4">
+
+		<div class="card mb-3 ">
+			<div class="row " style="position: relative;">
+				<div class="col-md-4 col-sm-12">
+					<img style="width:80%;position: absolute;top: 50%;left: 50%;transform: translate(-50%, 40%);"
+						src="{% static 'images/about-img.jpg' %}" class="img-responsive img-fluid" alt="about img">
+				</div>
+				<div style="padding-bottom: 20px;" class="col-md-8 col-sm-12  ">
+					<h2>Awards</h2>
+
+					<p>
+					<ul class="list-group list-group-flush" data-list="awards">
+						<li class="list-group-item list-group-item-action list-group-item-dark table-hover">
+							International Men’s Day Award – youngest recipient 7 years old
+						</li>
+						<li class="list-group-item list-group-item-action list-group-item-dark">
+							Personal Achievement Award - Science and Innovation
+						</li>
+						<li class="list-group-item list-group-item-action list-group-item-dark">
+							Character award – Respectful
+						</li>
+						<li class="list-group-item list-group-item-action list-group-item-dark">
+							Citizenship Award
+						</li>
+						<li class="list-group-item list-group-item-action list-group-item-dark">
+							Scholarship – Piano Outstanding Showmanship – 4 years old
+						</li>
+						<li class="list-group-item list-group-item-action list-group-item-dark">
+							Scholarship – Piano Outstanding Showmanship – 5 years old
+						</li>
+						<li class="list-group-item list-group-item-action list-group-item-dark">
+							Scholarship – Piano Outstanding Showmanship – 6 years old
+						</li>
+						<li class="list-group-item list-group-item-action list-group-item-dark">
+							Scholarship – Vocal Outstanding Showmanship – 6 years old
+						</li>
+
+
+						<span class="more" style="display: none;">
+
+							
+						</span>
+					</ul>
+					</p>
+					<a onclick="readMore('awards')"  class="myBtn btn btn-default ">Read More</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+   
+
+	<div class="container mb-4">
+        <h2>Charity Events</h2>
+		<div class="card mb-3 ">
+			<div class="row " style="position: relative;">
+				<div class="col-md-4 col-sm-12">
+					<img style="width:80%;position: absolute;top: 50%;left: 50%;transform: translate(-50%, 20%);"
+						src="{% static 'images/about-img.jpg' %}" class="img-responsive img-fluid" alt="about img">
+				</div>
+				<div style="padding-bottom: 20px;" class="col-md-8 col-sm-12  ">
+					<h2>Mission We are One</h2>
+
+					<p>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item list-group-item-action list-group-item-dark table-hover">
+							Help to re-establish libraries in schools destroyed by floods
+						</li>
+						<li class="list-group-item list-group-item-action list-group-item-dark">
+							Feed the homeless
+						</li>
+						<li class="list-group-item list-group-item-action list-group-item-dark">
+							Donate books to literacy program
+						</li>
+						
+
+					</ul>
+					</p>
+					<a href="about.html" class="btn btn-default">LEARN MORE</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="container mb-4">
+
+		<div class="card mb-3 ">
+			<div class="row " style="position: relative;">
+				<div class="col-md-4 col-sm-12">
+					<img style="width:80%;position: absolute;top: 50%;left: 50%;transform: translate(-50%, 10%);"
+						src="{% static 'images/about-img.jpg' %}" class="img-responsive img-fluid" alt="about img">
+				</div>
+				<div style="padding-bottom: 20px;" class="col-md-8 col-sm-12  ">
+					<h2>Sick Kids</h2>
+
+					<p>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item list-group-item-action list-group-item-dark table-hover">
+							performed for fundraiser
+						</li>
+						<br>
+						<br>
+
+					</ul>
+					</p>
+					<a href="about.html" class="btn btn-default">LEARN MORE</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="container mb-4">
+
+		<div class="card mb-3 ">
+			<div class="row " >
+				<div class="col-md-4 col-sm-12" style="position: relative;">
+					<img style="width:80%;position: absolute;top: 50%;left: 50%;transform: translate(-50%, 10%);"
+						src="{% static 'images/about-img.jpg' %}" class="img-responsive img-fluid" alt="about img">
+				</div>
+				<div style="padding-bottom: 20px;" class="col-md-8 col-sm-12  ">
+					<h2>West Indian Friends that Care</h2>
+
+					<p>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item list-group-item-action list-group-item-dark table-hover">
+							performed for fundraiser
+						</li>
+						<br>
+						<br>
+
+					</ul>
+					</p>
+					<a href="about.html" class="btn btn-default">LEARN MORE</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="container mb-4">
+
+		<div class="card mb-3 ">
+			<div class="row " >
+				<div class="col-md-4 col-sm-12" style="position: relative;">
+					<img style="width:80%;position: absolute;top: 50%;left: 50%;transform: translate(-50%, 10%);"
+						src="{% static 'images/about-img.jpg' %}" class="img-responsive img-fluid" alt="about img">
+				</div>
+				<div style="padding-bottom: 20px;" class="col-md-8 col-sm-12  ">
+					<h2>International Men’s Day</h2>
+
+					<p>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item list-group-item-action list-group-item-dark table-hover">
+							performed for fundraiser
+						</li>
+					<br>
+                    <br>
+					</ul>
+					</p>
+					<a href="about.html" class="btn btn-default">LEARN MORE</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</div>
+
+<!-- portfolio section -->
+<div id="portfolio">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-offset-2 col-md-8 col-sm-12">
+				<h2>Recent Projects</h2>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+					ut laoreet. Dolore magna aliquam erat volutpat.</p>
+			</div>
+		</div>
+
+		<div class="row mt30">
+
+			<div class="col-md-4 col-sm-4 col-xs-6">
+				<a href="{% static 'images/portfolio-img1.jpg' %}" data-lightbox-gallery="portfolio-gallery"><img
+						src="{% static 'images/portfolio-img1.jpg' %}" alt="portfolio img"></a>
+			</div>
+			<div class="col-md-4 col-sm-4 col-xs-6">
+				<a href="{% static 'images/portfolio-img2.jpg' %}" data-lightbox-gallery="portfolio-gallery"><img
+						src="{% static 'images/portfolio-img2.jpg' %}" alt="portfolio img"></a>
+			</div>
+			<div class="col-md-4 col-sm-4 col-xs-6">
+				<a href="{% static 'images/portfolio-img3.jpg' %}" data-lightbox-gallery="portfolio-gallery"><img
+						src="{% static 'images/portfolio-img3.jpg' %}" alt="portfolio img"></a>
+			</div>
+
+			<div class="col-md-3 col-sm-6 col-xs-6">
+				<a href="{% static 'images/portfolio-img4.jpg' %}" data-lightbox-gallery="portfolio-gallery"><img
+						src="{% static 'images/portfolio-img4.jpg' %}" alt="portfolio img"></a>
+			</div>
+			<div class="col-md-3 col-sm-6 col-xs-6">
+				<a href="{% static 'images/portfolio-img5.jpg' %}" data-lightbox-gallery="portfolio-gallery"><img
+						src="{% static 'images/portfolio-img5.jpg' %}" alt="portfolio img"></a>
+			</div>
+			<div class="col-md-3 col-sm-6 col-xs-6">
+				<a href="{% static 'images/portfolio-img6.jpg' %}" data-lightbox-gallery="portfolio-gallery"><img
+						src="{% static 'images/portfolio-img6.jpg' %}" alt="portfolio img"></a>
+			</div>
+			<div class="col-md-3 col-sm-6 col-xs-12">
+				<a href="{% static 'images/portfolio-img7.jpg' %}" data-lightbox-gallery="portfolio-gallery"><img
+						src="{% static 'images/portfolio-img7.jpg' %}" alt="portfolio img"></a>
+			</div>
+			<div class="col-md-12 col-sm-12">
+				<a rel="nofollow" href="http://www.templatemo.com/tag/darkgray" class="btn btn-default">View
+					More</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock content %}
