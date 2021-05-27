@@ -1,16 +1,146 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block css %}
+<style>
+    /* home section */
+#mission {
+  background: url('../static/images/mission.jpeg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 500px;
+  padding-top: 180px;
+  padding-bottom: 100px;
+}
+#mission h1,
+#mission h3 {
+  line-height: 30px;
+  font-size: 40px;
+}
+body {
+		background: #101010;
+		color: #cac1c1;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 400;
+	}
+
+	#more {
+		display: none;
+	}
+
+	.container {
+		margin-bottom: 20px;
+
+	}
+
+	.list-group-item {
+		position: relative;
+		display: block;
+		padding: 10px 15px;
+		margin-bottom: -1px;
+		background-color: #191919;
+		border: 1px solid #191919;
+	}
+
+	#about .btn {
+		margin-top: 0px;
+	}
+</style>
+{% endblock css %}
+
 {% block content %}
 
 <!-- about header section -->
-<div id="about-header">
+<div id="mission">
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-sm-12"></div>
         </div>
     </div>
 </div>
+
+
+
+
+<!-- about section -->
+<div id="about">
+	<div class="container mb-4">
+
+		<div class="card mb-3 ">
+			<div class="row " style="position: relative;">
+				<div class="col-md-4 col-sm-12">
+					<img style="width:80%;position: absolute;top: 50%;left: 50%;transform: translate(-50%, 50%);"
+						src="{% static 'images/about-img.jpg' %}" class="img-responsive img-fluid" alt="about img">
+				</div>
+				<div style="padding-bottom: 20px;" class="col-md-8 col-sm-12  ">
+					<h2>Mission We Are One</h2>
+
+					<p>
+					<ul class="list-group list-group-flush" data-list="accomplishments">
+						<li class="list-group-item list-group-item-action list-group-item-dark table-hover">
+							Shugababies
+						</li>
+						<li class="list-group-item list-group-item-action list-group-item-dark">
+							Save Abee – Mc for fundraising events
+						</li>
+						<li class="list-group-item list-group-item-action list-group-item-dark">
+							Restoring Paradise - Mc for fundraising events
+						</li>
+						
+					</ul>
+					</p>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="container mb-4">
+
+		<div class="card mb-3 ">
+			<div class="row " style="position: relative;">
+				<div class="col-md-4 col-sm-12">
+					<img style="width:80%;position: absolute;top: 50%;left: 50%;transform: translate(-50%, 50%);"
+						src="{% static 'images/about-img.jpg' %}" class="img-responsive img-fluid" alt="about img">
+				</div>
+				<div style="padding-bottom: 20px;" class="col-md-8 col-sm-12  ">
+					<h2>Mission We Are One Trinidad</h2>
+
+					<p>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item list-group-item-action list-group-item-dark table-hover">
+							Trinidad Flood Relief – food, clothing, school supplies, toiletries, distribution
+						</li>
+						<li class="list-group-item list-group-item-action list-group-item-dark">
+							Building homes for less fortunate
+						</li>
+						<li class="list-group-item list-group-item-action list-group-item-dark">
+							Domestic violence rescue missions
+						</li>
+						<li class="list-group-item list-group-item-action list-group-item-dark">
+							Drug/alcohol rehab programs
+						</li>
+						
+					</ul>
+					</p>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
 
 <!-- team section -->
 <div id="team">
@@ -27,7 +157,7 @@
         <div class="row mt-0">
             <div class="col-md-4 col-sm-4 col-xs-9">
                 <div class="team-wrapper">
-                    <img src="images/team1.jpg" class="img-responsive" alt="team img">
+                    <img src="{% static 'images/Vashtie_profile_pic.jpg' %}" class="img-responsive" alt="team img">
                     <h3>LINDA</h3>
                     <h4>Creative Director</h4>
                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismo.</p>
@@ -35,7 +165,7 @@
             </div>
             <div class="col-md-4 col-sm-4 col-xs-9">
                 <div class="team-wrapper">
-                    <img src="images/team2.jpg" class="img-responsive" alt="team img">
+                    <img src="{% static 'images/team2.jpg' %}" class="img-responsive" alt="team img">
                     <h3>JULIA</h3>
                     <h4>UX Designer</h4>
                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismo.</p>
@@ -43,7 +173,7 @@
             </div>
             <div class="col-md-4 col-sm-4 col-xs-9">
                 <div class="team-wrapper">
-                    <img src="images/team3.jpg" class="img-responsive" alt="team img">
+                    <img src="{% static 'images/team3.jpg' %}" class="img-responsive" alt="team img">
                     <h3>MARY</h3>
                     <h4>Frontend Developer</h4>
                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismo.</p>

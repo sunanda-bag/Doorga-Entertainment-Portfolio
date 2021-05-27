@@ -1,8 +1,164 @@
 {% extends 'base.html' %}
 {% load static %}
+{% block css %}
+
+<style>
+    @import "compass/css3";
+
+    @import "compass/css3";
+    @import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);
+
+    
+    .container {
+        margin: 0 auto;
+        width: 90%;
+        max-width: 1200px;
+    }
+
+    .group:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .grid-1-5 {
+        border: 2px solid #5d4e65;
+        min-height: 400px;
+        padding: 2.25em;
+        position: relative;
+        text-align: center;
+        transition: all .2s ease-in-out;
+        margin: 90px;
+    margin-left: 30%;
+    width: 275px;   
+
+        @media screen and (min-width: 700px) {
+            & {
+                float: left;
+                width: 50%;
+            }
+
+            &:nth-child(odd) {
+                clear: left;
+            }
+        }
+
+        @media screen and (min-width: 800px) {
+            & {
+                width: 33.3333333%;
+            }
+
+            &:nth-child(3n+1) {
+                clear: left;
+            }
+
+            &:nth-child(odd) {
+                clear: none;
+            }
+        }
+
+        @media screen and (min-width: 1120px) {
+            & {
+                width: 20%;
+            }
+
+            &:nth-child(odd),
+            &:nth-child(3n+1) {
+                clear: none;
+            }
+        }
+
+    }
+
+    
+    h2,
+    h3,
+    p,
+    ul {
+        margin: 0
+    }
+
+    h2 {
+        font-size: 1em;
+        font-weight: 400;
+        margin: 0 0 0.5em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+        letter-spacing: 0.0625em;
+        margin: 0 0 0.3333333333333333em;
+    }
+
+    p {
+        font-size: 0.875em;
+    }
+
+    p,
+    ul {
+        margin: 0 0 1.5em
+    }
+
+    ul {
+        color: #796583;
+        font-size: 0.75em;
+        list-style-type: none;
+        padding: 0;
+
+        li{
+            margin: 0 0 0.8333333333333333em;
+        }
+    }
+
+    .button {
+        background-color: #9c83aa;
+        border-radius: 20px;
+        color: #fff;
+        font-size: 1em;
+        font-weight: 700;
+        padding: 0.75em 1.5em;
+        position: absolute;
+        bottom: 1.25em;
+        left: 50%;
+        margin-left: -60px;
+        text-decoration: none;
+        width: 120px;
+    }
+
+    .uppercase,
+    .button,
+    h2 {
+        text-transform: uppercase;
+    }
+
+    sup,
+    .small {
+        font-size: 0.6125em;
+    }
+</style>
+{% endblock css %}
+
 
 {% block content %}
 
+<div class="container group">
+    
+    <div style="font-size: 1.8rem;" class="grid-1-5">
+        <h2>Advertising Rates</h2>
+        <!-- <h3><sup>$</sup>179<span class="small">/mo</span></h3>
+        <p>75,000 monthly visits</p> -->
+        <ul>
+            <li> Monthly- 2 ads/wk-$25 – 6 months minimum</li>
+            <li>Article - $100</li>
+            <li>Commercial - $100 - $150 with voice over and script</li>
+            <li>Endorsed mention - $50 x 2ads/month</li>
+            <li>Voice over - $50</li>
+            <li>Script - $50</li>
+            <li><strong>PR Management - $100/month</strong></li>
+        </ul>
 
+        <a href="" class="button">Sign Up</a>
+    </div>
+</div>
 
 {% endblock content %}

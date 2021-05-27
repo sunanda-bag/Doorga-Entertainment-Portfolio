@@ -3,6 +3,20 @@
 
 {% block css %}
 <style>
+    /* home section */
+#ary {
+  background: url('static/images/home-bg.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 500px;
+  padding-top: 180px;
+  padding-bottom: 100px;
+}
+#ary h1,
+#ary h3 {
+  line-height: 30px;
+  font-size: 40px;
+}
 	body {
 		background: #101010;
 		color: #cac1c1;
@@ -32,10 +46,12 @@
 		margin-top: 0px;
 	}
 </style>
+
 {% endblock css %}
+
 {% block content %}
 <!-- home section -->
-<div id="home">
+<div id="ary">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-5 col-sm-3"></div>

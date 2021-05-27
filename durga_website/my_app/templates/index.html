@@ -3,6 +3,22 @@
 
 {% block css %}
 <style>
+	/* home section */
+	#home {
+		background: url('../static/images/home-bg.jpg') no-repeat;
+		background-size: cover;
+		background-position: center;
+		min-height: 500px;
+		padding-top: 180px;
+		padding-bottom: 100px;
+	}
+
+	#home h1,
+	#home h3 {
+		line-height: 30px;
+		font-size: 40px;
+	}
+
 	body {
 		background: #101010;
 		color: #cac1c1;
@@ -129,7 +145,7 @@
 						</span>
 					</ul>
 					</p>
-					<a onclick="readMore('accomplishments')"  class="myBtn btn btn-default ">Read More</a>
+					<a onclick="readMore('accomplishments')" class="myBtn btn btn-default ">Read More</a>
 				</div>
 			</div>
 		</div>
