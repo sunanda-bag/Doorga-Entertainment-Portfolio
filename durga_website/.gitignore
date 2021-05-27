@@ -1,5 +1,5 @@
 # Environments
-*.envs
+*.env
 *.venv
 env/
 venv/
